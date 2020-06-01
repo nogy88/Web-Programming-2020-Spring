@@ -18,4 +18,4 @@
      Тус сургалтын 70%-г судалсан явж байна. 
      
      Хийж буй төсөл 
-       https://javascript1234.github.io/login
+       https://javascript1234.github.io/burger
