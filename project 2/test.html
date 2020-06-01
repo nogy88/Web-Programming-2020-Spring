@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+	<p id="test">testing...</p>
+	<button onclick="haih()">dar</button>
+
+	<script type="text/javascript">
+		function haih() {
+			var res = "The haih oguulber {{ym}} daa {{test}}.";
+			var re = /{{[^{]*}}/g;
+			var match = res.match(re);
+			var pre, key, after;
+			for (var i = 0; i < match.length; i++) {
+				pre = match[i];
+				key = pre.replace("{{", "");
+				key = key.replace("}}", "");
+				after = dictionary[key] || '';
+				// if (after === undefined) {
+				// 	after = '';
+				// }
+
+				res = res.replace(pre, after);
+			}
+			document.getElementById("test").innerHTML = match;
+			//alert(match);
+			// return res;
+		}
+	</script>
+</body>
+
+</html>
